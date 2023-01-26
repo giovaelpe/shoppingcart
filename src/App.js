@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import { Cart } from './Cart/Cart';
 import { Loader } from './features/Loader';
 import { Productcard } from './features/Productcard';
 import { loadProducts } from './features/ProductSlice';
@@ -30,6 +31,7 @@ function App() {
             shopping_cart
             </span>
           </h2>
+          <Cart />
         </section>
       </main>
     </div>

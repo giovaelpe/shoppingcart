@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import ProductSlice from './features/ProductSlice';
+import CartSlice from './Cart/CartSlice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({
   reducer : {
-    products: ProductSlice
+    products: ProductSlice,
+    cart: CartSlice
   }
 })
 root.render(
