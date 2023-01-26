@@ -12,6 +12,7 @@ header h1 {
   margin-left: 1rem;
 }
 
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,6 +21,7 @@ main {
 @media only screen and (max-width: 550px){
   header h1 {
     font-size: 0.7rem;
+    margin-left: 0;
   }
   main {
     grid-template-columns: none;
