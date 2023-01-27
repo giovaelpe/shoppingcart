@@ -7,10 +7,11 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import ProductSlice from './features/ProductSlice';
 import CartSlice from './Cart/CartSlice';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({
-  reducer : {
+  reducer: {
     products: ProductSlice,
     cart: CartSlice
   }
@@ -18,7 +19,9 @@ const store = configureStore({
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>
 );
